@@ -26,10 +26,10 @@ public:
 	 * ofxWSRequestHandler and pass it to this function, specifying
 	 * the pattern you want to look for.
 	 *
-	 * e.g. addHandler("*", handler); 
+	 * e.g. addHandler(handler, "*");
 	 * this would send all URL requests to the handler
 	 * 
-	 * e.g. addHandler("actions/*", handler);
+	 * e.g. addHandler(handler, "actions/*");
 	 * this would send any url beginning with actions/ to
 	 * the handler.
 	 */
