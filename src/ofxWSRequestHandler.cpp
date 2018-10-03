@@ -27,7 +27,7 @@ void ofxWSRequestHandler::httpRedirect(string url) {
 	// a bit hacky but have no internet right now, so this is good for now
 	string refr = "<html><head><meta HTTP-EQUIV=\"REFRESH\" content=\"0; url=";
 	refr += url + "\"></head></html>\r\n";
-	httpResponse(refr);
+	httpResponse("text/html", refr);
 }
 /**
  * Returns the client's ip address
