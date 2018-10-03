@@ -74,8 +74,12 @@ void webserverCallback(struct mg_connection *conn,
 
 	string query = "";
 	if(info->query_string!=NULL) query = info->query_string;
-
-	((ofxWSRequestHandler*)user_data)->setConnection(conn, "", query);
+	
+	
+	char ip[16];
+	
+	ipLongToString(info->remote_ip, ip);
+	((ofxWSRequestHandler*)user_data)->setConnection(conn, ip, query);
 
 	string method = info->request_method;
 	method = ofToLower(method);
